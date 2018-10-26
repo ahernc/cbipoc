@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema targetNamespace="urn:xmlns:centralbank.ie:anacredit" xmlns:cbi="urn:xmlns:centralbank.ie:anacredit" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified" version="1.0">
+  <xs:include schemaLocation="CreditDataTypes.xsd"/>
+
+  <xs:element name="ACR1BTemplates" nillable="true">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="InstrumentList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Instrument" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"                  id="IDS001"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"               id="DS0250"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"                id="DS0260"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ContractId"                     id="DS0270"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InstrumentId"                   id="DS0280"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="TypeOfInstrument"               id="DS0290"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="AmortisationType"               id="DS0300"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="Currency"                       id="DS0310"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="FiduciaryInstrument"            id="DS0320"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InceptionDate"                  id="DS0330"  type="cbi:DateNR"         minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="EndDateOfInterestOnlyPeriod"    id="DS0340"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InterestRateCap"                id="DS0350"  type="cbi:SDecimal6NANR"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InterestRateFloor"              id="DS0360"  type="cbi:SDecimal6NANR"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InterestRateResetFrequency"     id="DS0370"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InterestRateSpreadMargin"       id="DS0380"  type="cbi:SDecimal6NANR"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InterestRateType"               id="DS0390"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="LegalFinalMaturityDate"         id="DS0400"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="CommitmentAmountAtInception"    id="DS0410"  type="cbi:UDecimal2NANR"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="PaymentFrequency"               id="DS0420"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProjectFinanceLoan"             id="DS0430"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="Purpose"                        id="DS0440"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="Recourse"                       id="DS0450"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReferenceRate"                  id="DS0460"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="SettlementDate"                 id="DS0470"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="SubordinatedDebt"               id="DS0480"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="SyndicatedContractId"           id="DS0490"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="RepaymentRights"                id="DS0500"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="FairValueChangesDueToChangesInCreditRiskBeforePurchase"
+                                                                      id="DS0510"  type="cbi:UDecimal2NANR"  minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="FinancialList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Financial" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"                          id="IDS002"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"                       id="DS0520"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"                        id="DS0530"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ContractId"                             id="DS0540"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InstrumentId"                           id="DS0550"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InterestRate"                           id="DS0560"  type="cbi:SDecimal6NANR"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="NextInterestRateResetDate"              id="DS0570"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="DefaultStatusOfTheInstrument"           id="DS0580"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="DateOfTheDefaultStatusOfTheInstrument"  id="DS0590"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="TransferredAmount"                      id="DS0600"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ArrearsForTheInstrument"                id="DS0610"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="DateOfPastDueForTheInstrument"          id="DS0620"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="TypeOfSecuritisation"                   id="DS0630"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="OutstandingNominalAmount"               id="DS0640"  type="cbi:UDecimal2"      minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="AccruedInterest"                        id="DS0650"  type="cbi:SDecimal2NANR"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="OffBalanceSheetAmount"                  id="DS0660"  type="cbi:UDecimal2NA"    minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="CounterpartyInstrumentList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CounterpartyInstrument" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"      id="IDS003"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"   id="DS0670"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"    id="DS0680"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="CounterpartyId"     id="DS0690"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ContractId"         id="DS0700"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InstrumentId"       id="DS0710"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="CounterpartyRole"   id="DS0720"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="JointLiabilitiesList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JointLiabilities" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"          id="IDS004"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"       id="DS0730"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"        id="DS0740"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="CounterpartyId"         id="DS0750"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ContractId"             id="DS0760"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InstrumentId"           id="DS0770"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="JointLiabilityAmount"   id="DS0780"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ProtectionReceivedList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProtectionReceived" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"                  id="IDS005"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"               id="DS0990"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"                id="DS1000"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProtectionId"                   id="DS1010"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProtectionProviderId"           id="DS1020"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="TypeOfProtection"               id="DS1030"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProtectionValue"                id="DS1040"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="TypeOfProtectionValue"          id="DS1050"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProtectionValuationApproach"    id="DS1060"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="RealEstateCollateralLocation"   id="DS1070"  type="cbi:LookupValue"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="DateOfProtectionValue"          id="DS1080"  type="cbi:DateNR"         minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="MaturityDateOfProtection"       id="DS1090"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="OriginalProtectionValue"        id="DS1100"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="DateOfOriginalProtectionValue"  id="DS1110"  type="cbi:DateNR"         minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="InstrumentProtectionReceivedList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InstrumentProtectionReceived" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"                                  id="IDS006"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"                               id="DS1120"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"                                id="DS1130"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ContractId"                                     id="DS1140"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="InstrumentId"                                   id="DS1150"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProtectionId"                                   id="DS1160"  type="cbi:IdExtended"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProtectionAllocatedValue"                       id="DS1170"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ThirdPartyPriorityClaimsAgainstTheProtection"   id="DS1180"  type="cbi:UDecimal2NR"    minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="CounterpartyRiskList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CounterpartyRisk" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"                  id="IDS007"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"               id="DS1190"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"                id="DS1200"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="CounterpartyId"                 id="DS1210"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ProbabilityOfDefault"           id="DS1220"  type="cbi:ProbabilityNR"  maxOccurs="1"  minOccurs="1"/>
+                    <xs:element name="DateOfProbabilityOfDefault"     id="DS1225"  type="cbi:DateNR"         minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="CounterpartyDefaultList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CounterpartyDefault" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ReferenceDate"                          id="IDS008"  type="cbi:ReferenceDate"  minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ReportingAgentId"                       id="DS1230"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="ObservedAgentId"                        id="DS1240"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="CounterpartyId"                         id="DS1250"  type="cbi:IdStandard"     minOccurs="1"  maxOccurs="1"/>
+                    <xs:element name="DefaultStatusOfTheCounterparty"         id="DS1260"  type="cbi:LookupValue"    maxOccurs="1"  minOccurs="1"/>
+                    <xs:element name="DateOfDefaultStatusOfTheCounterparty"   id="DS1270"  type="cbi:DateNANR"       minOccurs="1"  maxOccurs="1"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>      
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
