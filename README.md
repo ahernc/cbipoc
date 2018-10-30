@@ -17,6 +17,6 @@ A class must be generated so that a type-safe object can be generated (or parsed
   - xsd /c cprd-schema-v4-3.xsd /n:XsdClasses.cbipoc 
 4. The Class will be generated in the folder you are in within the command prompt.
 
-Then the project source code, make sure the new .cs file is copied to the XsdClasses folder within the project.
+Then in the project source code, make sure the new .cs file is copied to the XsdClasses folder within the project.
 
 Note: Use any folder/naming convention you want. You can refactor the Class name and change the namespace as necessary.
